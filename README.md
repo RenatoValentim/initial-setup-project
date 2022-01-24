@@ -5,6 +5,7 @@ With git and nodeJS intalled execute
 source node-initial-setup-project.sh
 ```
 after finish setup execute
+open the file `commit-msg` into the `.husky` and modify the text `.git/hooks/commit-msg` adding `$1` like this `.git/hooks/commit-msg $1` 
 ```BASH
 npm run test:unit
 ```
