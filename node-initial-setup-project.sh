@@ -99,7 +99,7 @@ echo '{
 }' > .prettierrc.json;
 touch tests/example.spec.ts;
 echo "describe('ExampleSpec', () => {
-    test('This is a example of the test stricture', () => {
+    test('This is a example of the test structure', () => {
         expect(1).toBe(1)
     })
 })" > tests/example.spec.ts;
