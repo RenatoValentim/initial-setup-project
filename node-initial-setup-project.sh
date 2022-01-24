@@ -64,7 +64,7 @@ echo "module.exports = {
   testEnvironment: 'node',
   roots: ['<rootDir>/tests'],
   transform: {
-    '.+\\.ts$': 'ts-jest'
+    '.+\\\.ts$': 'ts-jest'
   },
   moduleNameMapper: {
     '@/tests/(.*)': '<rootDir>/tests/\$1',
