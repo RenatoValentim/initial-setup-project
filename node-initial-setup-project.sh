@@ -37,12 +37,22 @@ npm i -D \
   eslint-plugin-node@^11.1.0 \
   @typescript-eslint/eslint-plugin@^4.0.1 \
   eslint-config-standard-with-typescript@latest;
-echo "module.exports = {
-  extends: 'standard-with-typescript',
-  parserOptions: {
-    project: './tsconfig.json'
+echo '{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/comma-spacing": "off",
+    "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "import/export": "off"
   }
-}" > .eslintrc.js;
+}' > .eslintrc.json;
 echo "node_modules
 .vscode" > .eslintignore
 git add .;
