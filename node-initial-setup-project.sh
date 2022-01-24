@@ -67,8 +67,8 @@ echo "module.exports = {
     '.*.ts': 'ts-jest'
   },
   moduleNameMapper: {
-    '@/tests/(.*)': '<rootDir>/tests/$1',
-    '@/(.*)': '<rootDir>/src/$1'
+    '@/tests/(.*)': '<rootDir>/tests/\$1',
+    '@/(.*)': '<rootDir>/src/\$1'
   }
 }" > jest.config.js;
 echo "const config = require('./jest.config')
