@@ -1,1 +1,6 @@
-# initial-setup-node-project
+# Initial Setup to Node Project
+
+With git and nodeJS intalled execute
+```BASH
+source node-initial-setup-project.sh
+```
