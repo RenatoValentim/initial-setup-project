@@ -89,7 +89,6 @@ echo '{
   ]
 }' > .lintstagedrc.json;
 npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1";
-git add .;
 mkdir src;
 mkdir tests;
 echo '{
@@ -99,6 +98,7 @@ echo '{
   "singleQuote": true
 }' > .prettierrc.json;
 touch tests/example.spec.ts;
+git add .;
 echo "describe('ExampleSpec', () => {
     test('This is a example of the test structure', () => {
         expect(1).toBe(1)
