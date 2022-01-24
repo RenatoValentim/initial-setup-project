@@ -38,7 +38,7 @@ npm i -D \
   @typescript-eslint/eslint-plugin@^4.0.1 \
   eslint-config-standard-with-typescript@latest;
 echo "module.exports = {
-  extends: 'standard-with-typescriptkl',
+  extends: 'standard-with-typescript',
   parserOptions: {
     project: './tsconfig.json'
   }
