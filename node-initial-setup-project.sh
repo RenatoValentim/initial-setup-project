@@ -91,6 +91,12 @@ npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1";
 git add .;
 mkdir src;
 mkdir tests;
+echo '{
+  "arrowParens": "avoid",
+  "trailingComma": "none"
+  "semi": false,
+  "singleQuote": true
+}' > .prettierrc.json;
 touch tests/example.spec.ts;
 echo "describe('ExampleSpec', () => {
     test('This is a example of the test stricture', () => {
