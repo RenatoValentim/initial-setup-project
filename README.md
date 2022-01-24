@@ -1,12 +1,16 @@
 # Initial Setup to Node Project
 
-With git and nodeJS intalled execute
+## Requirements
+- git
+- nodeJS
+
+> **NOTE**: No need to clone this repository, just run
 ```BASH
-source node-initial-setup-project.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-node-project/main/node-initial-setup-project.sh | bash)"
 ```
 After finish setup open the file `commit-msg` into the `.husky` and modify the text `.git/hooks/commit-msg` adding `$1` like this `.git/hooks/commit-msg $1`
 
 To development using TDD execute
 ```BASH
 npm run test:unit
-```
+``` 
