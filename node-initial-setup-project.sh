@@ -80,6 +80,7 @@ npm set-script test:unit "npm test -- --watch -c jest-unit-config.js";
 git add .;
 git commit -m "chore: add jest";
 npx husky-init && npm install;
+npx husky add .husky/pre-commit "npx lint-staged";
 npm i -D lint-staged;
 echo '{
   "*.ts": [
