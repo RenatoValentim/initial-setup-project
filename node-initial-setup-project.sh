@@ -93,7 +93,7 @@ mkdir src;
 mkdir tests;
 echo '{
   "arrowParens": "avoid",
-  "trailingComma": "none"
+  "trailingComma": "none",
   "semi": false,
   "singleQuote": true
 }' > .prettierrc.json;
