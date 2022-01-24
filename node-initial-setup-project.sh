@@ -97,8 +97,8 @@ echo '{
   "semi": false,
   "singleQuote": true
 }' > .prettierrc.json;
-touch tests/example.spec.ts;
 git add .;
+touch tests/example.spec.ts;
 echo "describe('ExampleSpec', () => {
     test('This is a example of the test structure', () => {
         expect(1).toBe(1)
