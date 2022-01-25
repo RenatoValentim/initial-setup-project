@@ -50,6 +50,7 @@ echo '{
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
     "import/export": "off"
   }
 }' > .eslintrc.json;
