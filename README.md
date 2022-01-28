@@ -1,11 +1,11 @@
-# Initial Setup to Project
+# Initial Setup to Projects
 
 ### Requirements
 
 - git
 - curl
 
-> **NOTE**: No need to clone this repository, just run
+> **NOTE**: No need to clone this repository, just run the specified curl.
 
 ## None
 
