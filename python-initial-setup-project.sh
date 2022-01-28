@@ -82,5 +82,4 @@ python = "==CHANGE TO PYTHON VERSION"
 pipenv-to-requirements = "*"
 pre-commit = "*"
 pylint = "*"' > pyproject.toml;
-source ./venv/bin/activate;
 pytest -v --cov=src;
