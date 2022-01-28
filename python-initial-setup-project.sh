@@ -7,7 +7,9 @@ pip3 install --upgrade pip;
 pip3 install pynvim;
 pip3 install autopep8;
 mkdir src tests requirements | touch src/__init__.py tests/__init__.py tests/test_example.py;
-echo 'venv\n*cache*\n.coverage' > .gitignore;
+echo 'venv
+*cache*
+.coverage' > .gitignore;
 git add .gitignore;
 git commit -m "chore: add .gitignore";
 git add src/__init__.py;
