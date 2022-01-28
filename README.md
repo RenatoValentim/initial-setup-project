@@ -1,6 +1,8 @@
-# Initial Setup to Node Project
+# Initial Setup to Project
 
-## Requirements
+## None
+
+### Requirements
 - git
 - nodeJS
 - curl
