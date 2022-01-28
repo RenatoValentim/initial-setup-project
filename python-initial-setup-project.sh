@@ -2,7 +2,7 @@
 
 git init;
 python3 -m venv venv;
-source venv/bin/activate;
+source ./venv/bin/activate;
 pip3 install --upgrade pip;
 pip3 install pynvim;
 pip3 install autopep8;
