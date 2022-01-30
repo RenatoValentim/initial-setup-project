@@ -96,10 +96,10 @@ make_initial_setup_makefile() {
 
 normalize_value() {
   if [ $EMTPY_TEXT $1 ]; then
-    echo " "
+    echo " ";
     return
   fi
-  echo $1
+  echo $1;
 }
 
 main() {
