@@ -36,6 +36,10 @@ bash <(curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup
 
 > **NOTE**: The `-y` flag sets default values, if you need to set project info right at the beginning remove it.
 
+Post config
+
+1. change white spaces to tabulation on `Makefile`
+
 To development using TDD execute
 
 ```BASH
