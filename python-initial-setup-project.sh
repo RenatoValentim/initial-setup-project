@@ -90,8 +90,7 @@ pylint = \"*\"" > pyproject.toml;
 }
 
 make_initial_setup_makefile() {
-  echo "test-watch:
-  ptw" > Makefile;
+  echo "test-watch:\n\tptw" > Makefile;
 }
 
 main() {
