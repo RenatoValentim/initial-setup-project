@@ -31,7 +31,7 @@ npm run test:unit
 - python3
 
 ```BASH
-curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-project/main/python-initial-setup-project.sh | bash -s -- -y
+bash <(curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-project/main/python-initial-setup-project.sh) -y
 ```
 
 > **NOTE**: The `-y` flag sets default values, if you need to set project info right at the beginning remove it.
