@@ -116,7 +116,7 @@ main() {
     read author_name;
     printf "Email: ";
     read author_email;
-    echo "\n"
+    echo ""
   fi
   git init;
   python3 -m venv venv;
