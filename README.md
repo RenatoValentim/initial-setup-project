@@ -1,15 +1,15 @@
 # Initial Setup to Projects
 
-### Requirements
+## Requirements
 
 - git
 - curl
+- NodeJS to initialize Node project
+- Python3 to initialize Python project
 
 > **NOTE**: No need to clone this repository, just run the specified curl.
 
-## None
-
-- nodeJS
+## Node
 
 ```BASH
 curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-project/main/node-initial-setup-project.sh | bash
@@ -31,9 +31,13 @@ npm run test:unit
 - python3
 
 ```BASH
-curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-project/main/python-initial-setup-project.sh | bash
+curl -fsSL https://raw.githubusercontent.com/RenatoValentim/initial-setup-project/main/python-initial-setup-project.sh | bash -y
 ```
 
-Post config
+> **NOTE**: The `-y` flag sets default values, if you need to set project info right at the beginning remove it.
 
-1. edit pyproject.toml conforme your project information
+To development using TDD execute
+
+```BASH
+make test-watch
+``` 
