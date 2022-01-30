@@ -94,6 +94,12 @@ make_initial_setup_makefile() {
   ptw" > Makefile;
 }
 
+normalize_value() {
+  if [ $EMTPY_TEXT $1 ]; then
+    echo "\"\""
+  fi
+}
+
 main() {
   yes_for_all=$1
   if [[ $yes_for_all != "-y" && $yes_for_all != "" ]]; then
@@ -108,15 +114,20 @@ main() {
   if [ $EMTPY_TEXT $yes_for_all ]; then
     printf "Project name: ";
     read project_name;
+    normalize_value $project_name;
     printf "Project version: ";
     read project_version;
+    normalize_value project_version; 
     printf "Description: ";
     read project_description;
+    normalize_value project_description;
     printf "Author: ";
     read author_name;
+    normalize_value author_name;
     printf "Email: ";
     read author_email;
-    echo ""
+    normalize_value author_email;
+    echo "";
   fi
   git init;
   python3 -m venv venv;
