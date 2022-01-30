@@ -40,7 +40,7 @@ Post config
 
 1. change white spaces to tabulation on `Makefile`
 
-To development with started  `venv` using TDD execute
+To development using TDD with started `venv` execute
 
 ```BASH
 make test-watch
