@@ -100,11 +100,11 @@ main() {
     echo "Invalid parameter: expect -y";
     return
   fi
-  project_name="\"USER_NAME\"";
-  project_version="\"PROCJECT_VERSION\"";
-  project_description="\"PROCJECT_DESCRIPTION\"";
-  author_name="\"AUTHOR_NAME";
-  author_email="AUTHOR_EMAIL\"";
+  project_name="USER_NAME";
+  project_version="PROCJECT_VERSION";
+  project_description="PROCJECT_DESCRIPTION";
+  author_name="AUTHOR_NAME";
+  author_email="AUTHOR_EMAIL";
   if [ $EMTPY_TEXT $yes_for_all ]; then
     printf "Project name: ";
     read project_name;
