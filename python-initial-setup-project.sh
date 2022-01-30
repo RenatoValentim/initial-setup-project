@@ -95,6 +95,7 @@ make_initial_setup_makefile() {
 }
 
 main() {
+  yes_for_all=$1
   if [[ $yes_for_all != "-y" && $yes_for_all != "" ]]; then
     echo "Invalid parameter: expect -y";
     return
@@ -104,7 +105,6 @@ main() {
   project_description="PROCJECT_DESCRIPTION";
   author_name="AUTHOR_NAME";
   author_email="AUTHOR_EMAIL";
-  yes_for_all=$1
   if [ $EMTPY_TEXT $yes_for_all ]; then
     printf "Project name: ";
     read project_name;
