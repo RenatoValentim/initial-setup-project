@@ -102,6 +102,11 @@ normalize_value() {
   echo $1;
 }
 
+make_project_folder() {
+  mkdir $1;
+  cd $1;
+}
+
 main() {
   yes_for_all=$1
   if [[ $yes_for_all != "-y" && $yes_for_all != "" ]]; then
@@ -129,6 +134,24 @@ main() {
     printf "Email: ";
     read author_email;
     author_email=`normalize_value $author_email`;
+    printf "Creating project folder? (y/n): ";
+    read response;
+    if [[ $response == "y" ]]; then
+      make_project_folder $project_name;
+    fi
+    echo "";
+  else
+    printf "Creating project folder? (y/n): ";
+    read response;
+    if [[ $response == "y" ]]; then
+      printf "Enter a folder name: ";
+      read project_folder_name;
+      if [ $EMTPY_TEXT $project_folder_name ]; then
+        echo "Invalid parameter: folder name can not be empty text";
+        return
+      fi
+      make_project_folder $project_folder_name;
+    fi
     echo "";
   fi
   git init;
