@@ -75,10 +75,10 @@ make_initial_setup_pre-commit() {
 
 make_initial_setup_tool_project() {
   echo "[tool.poetry]
-name = $1
-version = $2
-description = $3
-authors = [$4 <$5>]
+name = \"$1\"
+version = \"$2\"
+description = \"$3\"
+authors = [\"$4 <$5>\"]
 
 [tool.poetry.dependencies]
 python = \"==`python3 --version 2>&1| sed -e "s/Python//g" | xargs`\"
@@ -103,8 +103,8 @@ main() {
   project_name="\"USER_NAME\"";
   project_version="\"PROCJECT_VERSION\"";
   project_description="\"PROCJECT_DESCRIPTION\"";
-  author_name="\"AUTHOR_NAME\"";
-  author_email="\"AUTHOR_EMAIL\"";
+  author_name="\"AUTHOR_NAME";
+  author_email="AUTHOR_EMAIL\"";
   if [ $EMTPY_TEXT $yes_for_all ]; then
     printf "Project name: ";
     read project_name;
