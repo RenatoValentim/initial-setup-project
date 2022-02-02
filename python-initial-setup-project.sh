@@ -124,10 +124,8 @@ main() {
     project_name=`normalize_value $project_name`;
     printf "Project version: ";
     read project_version;
-    project_version=`normalize_value $project_version`; 
-    printf "Description: ";
-    read project_description;
-    project_description=`normalize_value $project_description`;
+    project_version=`normalize_value $project_version`;
+    project_description="\" \"";
     printf "Author: ";
     read author_name;
     author_name=`normalize_value $author_name`;
