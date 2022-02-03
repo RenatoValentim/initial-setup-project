@@ -181,7 +181,7 @@ main() {
   make_initial_setup_pylint;
   git add .pylintrc;
   git commit -m "chore: add pylintrc";
-  pip3 install pytest pytest-cov codecov pytest-watch;
+  pip3 install pytest pytest-cov codecov pytest-watch pytest-mock;
   make_initial_setup_pytest;
   make_test_example;
   git add pytest.ini;
