@@ -11,6 +11,7 @@ make_initial_folder_setup() {
 make_initial_setup_gitignore() {
   echo "venv
 *cache*
+.vscode
 .coverage" > .gitignore;
 }
 
@@ -37,6 +38,13 @@ make_test_example() {
     assert isinstance('hello', str) == isinstance('world', str)" > tests/test_example.py;
 }
 
+make_initial_setup_flake8() {
+  echo "[flake8]
+ignore = E722, W503
+max-line-length = 120
+per-file-ignores = __init__.py: F401" > .flake8
+}
+
 make_initial_setup_pre-commit() {
   echo "repos:
   - repo: local
@@ -46,12 +54,14 @@ make_initial_setup_pre-commit() {
         entry: pylint
         language: system
         types: [python]
-  - repo: local
+  - repo: https://gitlab.com/PyCQA/flake8
+    rev: 3.7.9
     hooks:
-      - id: autopep8
-        name: autopep8
-        entry: autopep8
+      - id: flake8
+        name: flake8
+        entry: flake8
         language: system
+        stages: [commit]
   - repo: local
     hooks:
       - id: pytest
@@ -159,7 +169,6 @@ main() {
   source ./venv/bin/activate;
   pip3 install --upgrade pip;
   pip3 install pynvim;
-  pip3 install autopep8;
   make_initial_folder_setup;
   make_initial_setup_gitignore;
   git add .gitignore;
@@ -177,6 +186,10 @@ main() {
   make_test_example;
   git add pytest.ini;
   git commit -m "chore: add pytest";
+  pip3 install flake8;
+  make_initial_setup_flake8;
+  git add .flake8;
+  git commit -m "chore: add flake8";
   pip3 install pre-commit;
   make_initial_setup_pre-commit;
   git add .pre-commit-config.yaml;
