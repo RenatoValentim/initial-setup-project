@@ -32,6 +32,7 @@ minversion = `pytest --version 2>&1| sed -e "s/pytest//g" | xargs`
 addopts = -ra -q
 testpaths = \"tests\"
 log_cli = True" > pytest.ini;
+touch conftest.py;
 }
 
 make_test_example() {
