@@ -23,7 +23,8 @@ disable=
       C0116,
       W0201,
       E0401,
-      R0903" > .pylintrc;
+      R0903,
+      W0511" > .pylintrc;
 }
 
 make_initial_setup_pytest() {
@@ -49,6 +50,12 @@ per-file-ignores = __init__.py: F401" > .flake8
 
 make_initial_setup_pre-commit() {
   echo "repos:
+  - repo: https://github.com/ambv/black
+    rev: 21.12b0
+    hooks:
+    - id: black
+      language_version: python3.8
+      stages: [commit]
   - repo: local
     hooks:
       - id: pylint
