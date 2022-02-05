@@ -50,7 +50,7 @@ per-file-ignores = __init__.py: F401" > .flake8
 
 make_initial_setup_pre-commit() {
   echo "repos:
-  - repo: https://github.com/ambv/black
+  - repo: https://github.com/psf/black
     rev: 21.12b0
     hooks:
     - id: black
