@@ -24,7 +24,8 @@ disable=
       W0201,
       E0401,
       R0903,
-      W0511" > .pylintrc;
+      W0511,
+      W0703" > .pylintrc;
 }
 
 make_initial_setup_pytest() {
